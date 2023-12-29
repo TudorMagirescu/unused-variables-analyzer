@@ -1,0 +1,15 @@
+a = 1
+if (a < 1 + 2)
+    a = a + 1
+    b = a
+    c = 4
+    d = c
+    while (b < 3 * 3)
+        b = c + 1
+        if c < 10
+            c = 10
+        end
+    end
+end
+a = 2
+a = 2

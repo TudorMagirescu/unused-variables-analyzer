@@ -1,0 +1,11 @@
+a = 1
+b = a
+x = 3
+y = 4
+
+while (b < 5)
+  z = x
+  b = b + 1
+  x = 9
+  y = 10
+end
