@@ -17,11 +17,11 @@ abstract public class CFGNode {
         List<CFGNode> nodes = new ArrayList<>();
 
         for(int endIndex = 0; endIndex < program.size(); endIndex++) {
-            if(program.size() >= "if".length() && program.get(endIndex).startsWith("if"))
+            if(program.get(endIndex).length() >= "if".length() && program.get(endIndex).startsWith("if"))
                 balance++;
-            else if(program.size() >= "while".length() && program.get(endIndex).startsWith("while"))
+            else if(program.get(endIndex).length() >= "while".length() && program.get(endIndex).startsWith("while"))
                 balance++;
-            else if(program.size() >= "end".length() && program.get(endIndex).startsWith("end"))
+            else if(program.get(endIndex).length() >= "end".length() && program.get(endIndex).startsWith("end"))
                 balance--;
 
             if(balance == 0) {

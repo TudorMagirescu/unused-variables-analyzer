@@ -15,14 +15,17 @@ import static org.junit.Assert.assertTrue;
 public class ParserTest {
 
     @Test
-    public void test() throws Exception {
-        String program = readProgram("src/test/examples/input-program-02.txt");
-        List<String> expectedResult = expectedResult("src/test/examples/expected-output-02.txt");
+    public void runExamples() throws Exception {
+        for(int testCase = 1; testCase <= 3; testCase++) {
+            String program = readProgram("src/test/examples/input-program-0" + testCase + ".txt");
+            List<String> expectedResult = expectedResult("src/test/examples/expected-output-0" + testCase + ".txt");
 
-        CFGRoot parsedProgram = CFGRoot.readNode(program);
-        List<String> myResult = new Analyzer(parsedProgram).analyze();
+            CFGRoot parsedProgram = CFGRoot.readNode(program);
+            List<String> myResult = new Analyzer(parsedProgram).analyze();
 
-        assertTrue(listsAreTheSame(expectedResult, myResult));
+            assertTrue(listsAreTheSame(expectedResult, myResult));
+        }
+
     }
 
     private String readProgram(String path) throws Exception {
