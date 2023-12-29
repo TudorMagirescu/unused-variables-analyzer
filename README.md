@@ -16,12 +16,12 @@ Additionally, the system features a tool for analyzing **unused variables** with
 * Assumes the given programs are valid.
 * Is *newline sensitive*, meaning that each instruction should be written on one line.
 * Otherwise, it is *whitespace & indentation insensitive* and can allow empty lines.
-* Contains different types of nodes for *variable assignment*, *if statement* and *while statement* instructions. (*example 3 illustrates a scenario containing nested while loops*)
+* Contains different types of nodes for *variable assignment*, *if statement* and *while statement* instructions.
 
 ## Unused Variables Analysis Details
 * Each path in the control flow graph is considered to be traversed.
 * This means that *if* statements are considered to always be true.
-* *While* branches are considered to be traversed at least twice, but a finite amount of times. This also means that there will be at least two iterations of the inner *while* loop for each iteration of the outer loop.
+* *While* branches are considered to be traversed at least twice, but a finite amount of times. This also means that there will be at least two iterations of the inner *while* loop for each iteration of the outer loop. (*example 3 illustrates a scenario containing nested while loops*)
 
 ## Test cases
 * Are present in *src/test/examples*.
